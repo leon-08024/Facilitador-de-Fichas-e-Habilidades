@@ -1,0 +1,8 @@
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(5deg); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}

@@ -1,0 +1,130 @@
+<div class="flex flex-col bg-yellow-50 items-center justify-center min-h-screen text-gray-800">
+  <h1 class="text-5xl font-extrabold text-yellow-500 mb-8 drop-shadow-md">
+    Personalize sua Batata
+  </h1>
+
+  <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-3xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="flex flex-col">
+        <label class="text-lg font-semibold mb-2 text-yellow-600">Tipo de Batata</label>
+        <select
+          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        >
+          <option>Frita Tradicional</option>
+          <option>Rústica</option>
+          <option>Chips</option>
+          <option>Palito Grosso</option>
+          <option>Batata inteira</option>
+          <option>Batata Metade de uma batata inteira</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col">
+        <label class="text-lg font-semibold mb-2 text-yellow-600">Tempero</label>
+        <select
+          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        >
+          <option>Sal tradicional</option>
+          <option>Páprica</option>
+          <option>Alho e ervas</option>
+          <option>Chilli picante</option>
+          <option>Açucar</option>
+          <option>Sal do Himalaia</option>
+          <option>Sal Invisivel</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col">
+        <label class="text-lg font-semibold mb-2 text-yellow-600">Molho</label>
+        <select
+          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        >
+          <option>Cheddar</option>
+          <option>Barbecue</option>
+          <option>Alho e ervas</option>
+          <option>Maionese temperada</option>
+          <option>Shampoo</option>
+          <option>Condionador</option>
+          <option>Oleo de Carro</option>
+          <option>Sem Molho</option>
+        </select>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-lg font-semibold mb-2 text-yellow-600">Estilo da Batata</label>
+        <select
+          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        >
+          <option>Batata Tradicional</option>
+          <option>Batata Gótica Suave</option>
+          <option>Batata Coach Motivacional</option>
+          <option>Batata Gamer RGB</option>
+          <option>Batata Influencer</option>
+          <option>Batata Misteriosa (não garantimos estilo)</option>
+        </select>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-lg font-semibold mb-2 text-yellow-600">Batata do Amor?</label>
+        <select
+          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        >
+          <option>Batata apaixonada (com bilhete fofo)</option>
+          <option>Batata do ex (amaldiçoada)</option>
+          <option>Batata “me iludiu” (vem fria e distante)</option>
+          <option>Batata crush (com cheiro de frita nova)</option>
+          <option>Batata casamento (vem com aliança simbólica)</option>
+          <option>Batata sem Amor</option>
+        </select>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-lg font-semibold mb-2 text-yellow-600">Profissão da Batata</label>
+        <select
+          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        >
+          <option>Batata Advogada (fala mais que o cliente)</option>
+          <option>Batata Programadora (buga às vezes)</option>
+          <option>Batata Influencer (faz stories o dia todo)</option>
+          <option>Batata Coach (fala “acredite na sua casca”)</option>
+          <option>Batata Gamer (com headset e ansiedade)</option>
+          <option>Batata Psicologa (te julga em segredo)</option>
+          <option>Batata Vagabunda (suga o seu dinheiro)</option>
+        </select>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-lg font-semibold mb-2 text-yellow-600">Personalização Aleatória</label>
+        <select
+          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        >
+          <option>Batata NFT (única e inútil)</option>
+          <option>Batata com QR Code (toca um áudio surpresa)</option>
+          <option>Batata com Rosto Impresso</option>
+          <option>Batata Tatuada a Laser</option>
+          <option>Batata com tempo disponivel (ela tem uma agenda aberta)</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col">
+        <label class="text-lg font-semibold mb-2 text-yellow-600">Quantidade</label>
+        <input
+          type="number"
+          min="1"
+          value="1"
+          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center mt-10">
+      <img
+        src="https://i.ibb.co/MDVwcqCW/image-removebg-preview.png"
+        alt="batata personalizada"
+        class="w-56 drop-shadow-md hover:scale-105 transition-transform duration-300"
+      />
+      <button
+       (click)="finalizarPedidoCustomizer()"
+        class="mt-6 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition duration-300"
+      >
+        Finalizar Pedido
+      </button>
+    </div>
+  </div>
+</div>
