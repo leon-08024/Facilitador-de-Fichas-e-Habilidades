@@ -14,7 +14,7 @@ interface User {
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
