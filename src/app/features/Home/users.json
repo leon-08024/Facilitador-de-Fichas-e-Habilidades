@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "username": "mestre",
+      "password": "1234",
+      "role": "mestre",
+      "nome": "Mestre"
+    },
+    {
+      "username": "player1",
+      "password": "1234",
+      "role": "player",
+      "nome": "Bambinelson"
+    },
+    {
+      "username": "player2",
+      "password": "1234",
+      "role": "player",
+      "nome": "Jogador 2"
+    }
+  ]
+}

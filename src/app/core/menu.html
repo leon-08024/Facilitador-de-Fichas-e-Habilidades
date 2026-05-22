@@ -1,26 +1,35 @@
-<nav class="w-full bg-yellow-500 shadow-xl p-4 sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
+<nav class="fixed top-0 left-0 right-0 z-50">
+  <!-- Linha decorativa superior vermelha -->
+  <div class="h-[2px] bg-gradient-to-r from-transparent via-red-700 to-transparent"></div>
 
-    <!-- Logo -->
-    <a routerLink="/" class="flex items-center space-x-3">
-      <img class="w-12 h-12" src="https://i.ibb.co/tP2DmLRf/Design-sem-nome-2-removebg-preview.png" alt="Batatex">
-      <span class="text-2xl text-white font-extrabold tracking-tight">Batatex</span>
-    </a>
+  <div class="bg-zinc-950/70 backdrop-blur-md border-b border-zinc-800/50">
+    <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
 
-    <!-- Links Desktop -->
-    <div class="hidden md:flex items-center space-x-8">
-      <a routerLink="/" class="text-white text-lg font-medium hover:bg-yellow-600 px-4 py-2 rounded-lg transition">Início</a>
-      <a routerLink="/custom" class="text-white text-lg font-medium hover:bg-yellow-600 px-4 py-2 rounded-lg transition">Personalizar</a>
-      
-      <a routerLink="/cart" class="relative text-white text-lg font-medium hover:bg-yellow-600 px-4 py-2 rounded-lg transition flex items-center">
-        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      <!-- Logo esquerda -->
+      <div class="flex items-center">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Ordem_Paranormal_RPG_Logo.png"
+          alt="Ordem Paranormal"
+          class="h-12 w-auto object-contain brightness-0 invert"
+        />
+      </div>
+
+      <!-- Ornamento central -->
+      <div class="hidden md:flex items-center gap-2 text-zinc-700">
+        <div class="w-10 h-[1px] bg-gradient-to-r from-transparent to-zinc-600"></div>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="text-zinc-600">
+          <path d="M8 1L9.5 6H15L10.5 9.5L12 14.5L8 11L4 14.5L5.5 9.5L1 6H6.5L8 1Z" 
+                stroke="currentColor" stroke-width="1" fill="none"/>
         </svg>
-        Carrinho
-        </a>
-    </div>
+        <div class="w-10 h-[1px] bg-gradient-to-l from-transparent to-zinc-600"></div>
+      </div>
 
-    <!-- Mobile menu (opcional, posso fazer se quiser) -->
+      <!-- Status direita -->
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+        <span class="text-zinc-500 text-xs tracking-widest uppercase">Fichas Digitais</span>
+      </div>
+
+    </div>
   </div>
 </nav>

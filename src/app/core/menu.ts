@@ -8,9 +8,5 @@ import { RouterLink } from "@angular/router";
   styleUrl: './menu.scss'
 })
 export class Menu {
-atualizarCarrinho() {
-  const carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]');
-  const contador = document.getElementById('cart-count');
-  if (contador) contador.textContent = carrinho.length.toString();
-}
+
 }
