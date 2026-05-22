@@ -7,12 +7,14 @@
       "nome": "Mestre"
     },
     {
+      "user": "u1",
       "username": "player1",
       "password": "1234",
       "role": "player",
       "nome": "Bambinelson"
     },
     {
+      "user": "u2",
       "username": "player2",
       "password": "1234",
       "role": "player",

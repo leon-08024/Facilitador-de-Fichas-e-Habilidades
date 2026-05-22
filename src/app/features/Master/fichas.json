@@ -1,0 +1,43 @@
+{
+  "id": "f1",
+  "ownerId": "u1",
+  "name": "Placeholder",
+  "class": "Placeholder",
+  "origin": "Policial",
+  "nex": 0,
+  "attributes": {
+    "FOR": 1, "AGI": 1, "INT": 1, "PRE": 1, "VIG": 1
+  },
+  "maxStats": {
+    "PV": 1, "PE": 1, "SAN": 1
+  },
+  "currentStats": {
+    "PV": 1, "PE": 1, "SAN": 1
+  },
+  "defesa": 0,
+  "protecao": 0,
+  "deslocamento": 0,
+  "skills": {
+    "Atletismo": 1, "Luta": 1, "Pontaria": 1
+  },
+  "attacks": [
+    {
+      "name": "Placeholder",
+      "test": "+9",
+      "damage": "2d6+2",
+      "critical": "18",
+      "range": "20m"
+    }
+  ],
+  "abilities": [
+    {
+      "name": "Placeholder",
+      "cost": 0,
+      "description": "Placeholder."
+    }
+  ],
+  "inventory": [
+    { "id": "i1", "name": "Placeholder", "category": "II", "spaces": 1 },
+    { "id": "i2", "name": "Placeholder", "category": "I", "spaces": 2 }
+  ]
+}

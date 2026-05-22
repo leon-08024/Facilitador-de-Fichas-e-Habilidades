@@ -1,130 +1,494 @@
-<div class="flex flex-col bg-yellow-50 items-center justify-center min-h-screen text-gray-800">
-  <h1 class="text-5xl font-extrabold text-yellow-500 mb-8 drop-shadow-md">
-    Personalize sua Batata
-  </h1>
-
-  <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-3xl">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="flex flex-col">
-        <label class="text-lg font-semibold mb-2 text-yellow-600">Tipo de Batata</label>
-        <select
-          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-        >
-          <option>Frita Tradicional</option>
-          <option>Rústica</option>
-          <option>Chips</option>
-          <option>Palito Grosso</option>
-          <option>Batata inteira</option>
-          <option>Batata Metade de uma batata inteira</option>
-        </select>
-      </div>
-
-      <div class="flex flex-col">
-        <label class="text-lg font-semibold mb-2 text-yellow-600">Tempero</label>
-        <select
-          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-        >
-          <option>Sal tradicional</option>
-          <option>Páprica</option>
-          <option>Alho e ervas</option>
-          <option>Chilli picante</option>
-          <option>Açucar</option>
-          <option>Sal do Himalaia</option>
-          <option>Sal Invisivel</option>
-        </select>
-      </div>
-
-      <div class="flex flex-col">
-        <label class="text-lg font-semibold mb-2 text-yellow-600">Molho</label>
-        <select
-          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-        >
-          <option>Cheddar</option>
-          <option>Barbecue</option>
-          <option>Alho e ervas</option>
-          <option>Maionese temperada</option>
-          <option>Shampoo</option>
-          <option>Condionador</option>
-          <option>Oleo de Carro</option>
-          <option>Sem Molho</option>
-        </select>
-      </div>
-      <div class="flex flex-col">
-        <label class="text-lg font-semibold mb-2 text-yellow-600">Estilo da Batata</label>
-        <select
-          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-        >
-          <option>Batata Tradicional</option>
-          <option>Batata Gótica Suave</option>
-          <option>Batata Coach Motivacional</option>
-          <option>Batata Gamer RGB</option>
-          <option>Batata Influencer</option>
-          <option>Batata Misteriosa (não garantimos estilo)</option>
-        </select>
-      </div>
-      <div class="flex flex-col">
-        <label class="text-lg font-semibold mb-2 text-yellow-600">Batata do Amor?</label>
-        <select
-          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-        >
-          <option>Batata apaixonada (com bilhete fofo)</option>
-          <option>Batata do ex (amaldiçoada)</option>
-          <option>Batata “me iludiu” (vem fria e distante)</option>
-          <option>Batata crush (com cheiro de frita nova)</option>
-          <option>Batata casamento (vem com aliança simbólica)</option>
-          <option>Batata sem Amor</option>
-        </select>
-      </div>
-      <div class="flex flex-col">
-        <label class="text-lg font-semibold mb-2 text-yellow-600">Profissão da Batata</label>
-        <select
-          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-        >
-          <option>Batata Advogada (fala mais que o cliente)</option>
-          <option>Batata Programadora (buga às vezes)</option>
-          <option>Batata Influencer (faz stories o dia todo)</option>
-          <option>Batata Coach (fala “acredite na sua casca”)</option>
-          <option>Batata Gamer (com headset e ansiedade)</option>
-          <option>Batata Psicologa (te julga em segredo)</option>
-          <option>Batata Vagabunda (suga o seu dinheiro)</option>
-        </select>
-      </div>
-      <div class="flex flex-col">
-        <label class="text-lg font-semibold mb-2 text-yellow-600">Personalização Aleatória</label>
-        <select
-          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-        >
-          <option>Batata NFT (única e inútil)</option>
-          <option>Batata com QR Code (toca um áudio surpresa)</option>
-          <option>Batata com Rosto Impresso</option>
-          <option>Batata Tatuada a Laser</option>
-          <option>Batata com tempo disponivel (ela tem uma agenda aberta)</option>
-        </select>
-      </div>
-
-      <div class="flex flex-col">
-        <label class="text-lg font-semibold mb-2 text-yellow-600">Quantidade</label>
-        <input
-          type="number"
-          min="1"
-          value="1"
-          class="border border-yellow-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+<div class="min-h-screen bg-zinc-950 text-white flex flex-col">
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50">
+    <div class="h-[2px] bg-gradient-to-r from-transparent via-red-700 to-transparent"></div>
+    <div class="bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50">
+      <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Ordem_Paranormal_RPG_Logo.png"
+          alt="Ordem Paranormal"
+          class="h-7 w-auto brightness-0 invert"
         />
+        <span class="text-zinc-500 text-xs tracking-widest uppercase hidden md:block"
+          >Painel do Mestre</span
+        >
+        <button
+          (click)="logout()"
+          class="text-xs text-zinc-500 hover:text-red-400 tracking-widest uppercase transition-colors"
+        >
+          Sair
+        </button>
       </div>
     </div>
+  </nav>
 
-    <div class="flex flex-col items-center justify-center mt-10">
-      <img
-        src="https://i.ibb.co/MDVwcqCW/image-removebg-preview.png"
-        alt="batata personalizada"
-        class="w-56 drop-shadow-md hover:scale-105 transition-transform duration-300"
-      />
+  <div class="flex flex-1 pt-14 max-w-7xl mx-auto w-full px-4 py-6 gap-6">
+    <!-- SIDEBAR: lista de fichas -->
+    <aside class="w-56 shrink-0 flex flex-col gap-2">
+      <p class="text-xs text-zinc-500 tracking-widest uppercase mb-2 px-1">Agentes</p>
       <button
-       (click)="finalizarPedidoCustomizer()"
-        class="mt-6 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition duration-300"
+        *ngFor="let ficha of fichas"
+        (click)="selectFicha(ficha)"
+        [class.bg-zinc-800]="selectedFicha?.id === ficha.id"
+        [class.border-red-700]="selectedFicha?.id === ficha.id"
+        [class.border-zinc-800]="selectedFicha?.id !== ficha.id"
+        class="text-left px-4 py-3 rounded-xl border transition-all duration-200 hover:border-zinc-600 hover:bg-zinc-900"
       >
-        Finalizar Pedido
+        <p class="text-sm font-semibold text-white truncate">{{ ficha.name }}</p>
+        <p class="text-xs text-zinc-500 mt-0.5">{{ ficha.class }} · NEX {{ ficha.nex }}%</p>
       </button>
-    </div>
+    </aside>
+
+    <!-- FICHA PRINCIPAL -->
+    <main class="flex-1 min-w-0" *ngIf="selectedFicha">
+      <!-- Header da ficha -->
+      <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-4">
+        <div class="flex items-start justify-between gap-4 flex-wrap">
+          <div>
+            <h1 class="text-3xl font-bold tracking-tight">{{ selectedFicha.name }}</h1>
+            <p class="text-zinc-400 mt-1">
+              <span class="text-red-500 font-medium">{{ selectedFicha.class }}</span>
+              · {{ selectedFicha.origin }} ·
+              <span class="text-zinc-300">NEX {{ selectedFicha.nex }}%</span>
+            </p>
+          </div>
+          <div class="flex gap-3 text-center">
+            <div class="bg-zinc-800 rounded-xl px-4 py-2">
+              <p class="text-xs text-zinc-500 uppercase tracking-wider">Defesa</p>
+              <p class="text-xl font-bold">{{ selectedFicha.defesa }}</p>
+            </div>
+            <div class="bg-zinc-800 rounded-xl px-4 py-2">
+              <p class="text-xs text-zinc-500 uppercase tracking-wider">Proteção</p>
+              <p class="text-xl font-bold">{{ selectedFicha.protecao }}</p>
+            </div>
+            <div class="bg-zinc-800 rounded-xl px-4 py-2">
+              <p class="text-xs text-zinc-500 uppercase tracking-wider">Desl.</p>
+              <p class="text-xl font-bold">{{ selectedFicha.deslocamento }}m</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barras de vida/recursos -->
+        <!-- Barras de vida/recursos -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
+          <div *ngFor="let stat of stats">
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-zinc-400">{{ stat.label }}</span>
+              <span class="font-mono text-white">
+                {{ getStat(stat.key) }} / {{ getMaxStat(stat.key) }}
+              </span>
+            </div>
+            <div class="h-2 bg-zinc-700 rounded-full overflow-hidden">
+              <div
+                [class]="stat.color + ' h-full rounded-full transition-all duration-500'"
+                [style.width.%]="statPercent(getStat(stat.key), getMaxStat(stat.key))"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atributos - Layout Hexagonal -->
+        <div class="flex justify-center items-center my-6">
+          <svg viewBox="0 0 500 460" width="100%" style="max-width: 460px">
+            <!-- Anel runico decorativo externo -->
+            <circle
+              cx="250"
+              cy="230"
+              r="210"
+              fill="none"
+              stroke="#3f3f46"
+              stroke-width="1"
+              stroke-dasharray="2 4"
+            />
+            <circle
+              cx="250"
+              cy="230"
+              r="200"
+              fill="none"
+              stroke="#52525b"
+              stroke-width="0.5"
+              stroke-dasharray="1 6"
+            />
+            <!-- HEXÁGONO CENTRAL (escuro, preenchido) -->
+            <polygon
+              points="250,168 308,200 308,258 250,290 192,258 192,200"
+              fill="#09090b"
+              stroke="#a1a1aa"
+              stroke-width="2"
+            />
+            <polygon
+              points="250,173 304,203 304,255 250,287 196,255 196,203"
+              fill="none"
+              stroke="#52525b"
+              stroke-width="1"
+            />
+            <text
+              x="252"
+              y="230"
+              text-anchor="middle"
+              dominant-baseline="central"
+              fill="white"
+              font-family="monospace"
+              font-size="13"
+              font-weight="900"
+              letter-spacing="3"
+            >
+              ATRIBUTOS
+            </text>
+
+            <!-- AGI (topo) -->
+            <polygon
+              points="250,40 304,72 304,134 250,166 196,134 196,72"
+              fill="#18181b"
+              stroke="#a1a1aa"
+              stroke-width="2"
+            />
+            <polygon
+              points="250,45 299,75 299,130 250,162 201,130 201,75"
+              fill="none"
+              stroke="#3f3f46"
+              stroke-width="1"
+            />
+            <text
+              x="252"
+              y="90"
+              text-anchor="middle"
+              fill="#a1a1aa"
+              font-family="sans-serif"
+              font-size="9"
+              font-weight="600"
+              letter-spacing="2"
+            >
+              AGILIDADE
+            </text>
+            <text
+              x="250"
+              y="120"
+              text-anchor="middle"
+              fill="white"
+              font-family="monospace"
+              font-size="26"
+              font-weight="900"
+            >
+              AGI
+            </text>
+            <text
+              x="250"
+              y="150"
+              text-anchor="middle"
+              fill="#e4e4e7"
+              font-family="monospace"
+              font-size="20"
+              font-weight="700"
+            >
+              {{ selectedFicha.attributes['AGI'] }}
+            </text>
+
+            <!-- INT (direita superior) -->
+            <polygon
+              points="360,90 412,118 412,178 360,206 308,178 308,118"
+              fill="#18181b"
+              stroke="#a1a1aa"
+              stroke-width="2"
+            />
+            <polygon
+              points="360,95 409,122 409,173 360,201 311,173 311,122"
+              fill="none"
+              stroke="#3f3f46"
+              stroke-width="1"
+            />
+            <text
+              x="362"
+              y="140"
+              text-anchor="middle"
+              fill="#a1a1aa"
+              font-family="sans-serif"
+              font-size="9"
+              font-weight="600"
+              letter-spacing="2"
+            >
+              INTELECTO
+            </text>
+            <text
+              x="361"
+              y="170"
+              text-anchor="middle"
+              fill="white"
+              font-family="monospace"
+              font-size="26"
+              font-weight="900"
+            >
+              INT
+            </text>
+            <text
+              x="360"
+              y="193"
+              text-anchor="middle"
+              fill="#e4e4e7"
+              font-family="monospace"
+              font-size="20"
+              font-weight="700"
+            >
+              {{ selectedFicha.attributes['INT'] }}
+            </text>
+
+            <!-- VIG (direita inferior) -->
+            <polygon
+              points="360,252 412,280 412,340 360,368 308,340 308,280"
+              fill="#18181b"
+              stroke="#a1a1aa"
+              stroke-width="2"
+            />
+            <polygon
+              points="360,257 409,284 409,335 360,363 311,335 311,284"
+              fill="none"
+              stroke="#3f3f46"
+              stroke-width="1"
+            />
+            <text
+              x="362"
+              y="301"
+              text-anchor="middle"
+              fill="#a1a1aa"
+              font-family="sans-serif"
+              font-size="9"
+              font-weight="600"
+              letter-spacing="2"
+            >
+              VIGOR
+            </text>
+            <text
+              x="361"
+              y="330"
+              text-anchor="middle"
+              fill="white"
+              font-family="monospace"
+              font-size="26"
+              font-weight="900"
+            >
+              VIG
+            </text>
+            <text
+              x="360"
+              y="356"
+              text-anchor="middle"
+              fill="#e4e4e7"
+              font-family="monospace"
+              font-size="20"
+              font-weight="700"
+            >
+              {{ selectedFicha.attributes['VIG'] }}
+            </text>
+
+            <!-- PRE (esquerda inferior) -->
+            <polygon
+              points="140,252 192,280 192,340 140,368 88,340 88,280"
+              fill="#18181b"
+              stroke="#a1a1aa"
+              stroke-width="2"
+            />
+            <polygon
+              points="140,257 189,284 189,335 140,363 91,335 91,284"
+              fill="none"
+              stroke="#3f3f46"
+              stroke-width="1"
+            />
+            <text
+              x="142"
+              y="301"
+              text-anchor="middle"
+              fill="#a1a1aa"
+              font-family="sans-serif"
+              font-size="9"
+              font-weight="600"
+              letter-spacing="2"
+            >
+              PRESENÇA
+            </text>
+            <text
+              x="141"
+              y="330"
+              text-anchor="middle"
+              fill="white"
+              font-family="monospace"
+              font-size="26"
+              font-weight="900"
+            >
+              PRE
+            </text>
+            <text
+              x="140"
+              y="356"
+              text-anchor="middle"
+              fill="#e4e4e7"
+              font-family="monospace"
+              font-size="20"
+              font-weight="700"
+            >
+              {{ selectedFicha.attributes['PRE'] }}
+            </text>
+
+            <!-- FOR (esquerda superior) -->
+            <polygon
+              points="140,90 192,118 192,178 140,206 88,178 88,118"
+              fill="#18181b"
+              stroke="#a1a1aa"
+              stroke-width="2"
+            />
+            <polygon
+              points="140,95 189,122 189,173 140,201 91,173 91,122"
+              fill="none"
+              stroke="#3f3f46"
+              stroke-width="1"
+            />
+            <text
+              x="142"
+              y="137"
+              text-anchor="middle"
+              fill="#a1a1aa"
+              font-family="sans-serif"
+              font-size="9"
+              font-weight="600"
+              letter-spacing="2"
+            >
+              FORÇA
+            </text>
+            <text
+              x="141"
+              y="168"
+              text-anchor="middle"
+              fill="white"
+              font-family="monospace"
+              font-size="26"
+              font-weight="900"
+            >
+              FOR
+            </text>
+            <text
+              x="140"
+              y="192"
+              text-anchor="middle"
+              fill="#e4e4e7"
+              font-family="monospace"
+              font-size="20"
+              font-weight="700"
+            >
+              {{ selectedFicha.attributes['FOR'] }}
+            </text>
+          </svg>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex gap-1 mb-4 bg-zinc-900 border border-zinc-800 rounded-xl p-1 w-fit">
+          <button
+            *ngFor="let tab of tabs"
+            (click)="setTab(tab.id)"
+            [class.bg-zinc-700]="activeTab === tab.id"
+            [class.text-white]="activeTab === tab.id"
+            [class.text-zinc-500]="activeTab !== tab.id"
+            class="px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-150"
+          >
+            {{ tab.label }}
+          </button>
+        </div>
+
+        <!-- Tab: Perícias -->
+        <div
+          *ngIf="activeTab === 'stats'"
+          class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5"
+        >
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+            <div
+              *ngFor="let skill of getSkillEntries(selectedFicha.skills)"
+              class="flex justify-between items-center bg-zinc-800 rounded-lg px-3 py-2"
+            >
+              <span class="text-sm text-zinc-300">{{ skill[0] }}</span>
+              <span class="font-mono font-bold text-white text-sm">{{ skill[1] }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Ataques -->
+        <div
+          *ngIf="activeTab === 'attacks'"
+          class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5"
+        >
+          <div class="space-y-3">
+            <div
+              *ngFor="let attack of selectedFicha.attacks"
+              class="grid grid-cols-2 md:grid-cols-5 gap-3 bg-zinc-800 rounded-xl p-4 items-center"
+            >
+              <div class="col-span-2 md:col-span-1">
+                <p class="font-semibold text-white">{{ attack.name }}</p>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Teste</p>
+                <p class="font-mono text-sm text-green-400">{{ attack.test }}</p>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Dano</p>
+                <p class="font-mono text-sm text-red-400">{{ attack.damage }}</p>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Crítico</p>
+                <p class="font-mono text-sm text-yellow-400">{{ attack.critical }}</p>
+              </div>
+              <div class="text-center">
+                <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Alcance</p>
+                <p class="font-mono text-sm text-blue-400">{{ attack.range }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Habilidades -->
+        <div
+          *ngIf="activeTab === 'abilities'"
+          class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5"
+        >
+          <div class="space-y-3">
+            <div *ngFor="let ability of selectedFicha.abilities" class="bg-zinc-800 rounded-xl p-4">
+              <div class="flex items-center justify-between mb-1">
+                <p class="font-semibold text-white">{{ ability.name }}</p>
+                <span
+                  *ngIf="ability.cost > 0"
+                  class="text-xs bg-blue-900/50 text-blue-300 border border-blue-800 rounded-full px-2 py-0.5"
+                >
+                  {{ ability.cost }} PE
+                </span>
+                <span
+                  *ngIf="ability.cost === 0"
+                  class="text-xs bg-zinc-700 text-zinc-400 rounded-full px-2 py-0.5"
+                >
+                  Passiva
+                </span>
+              </div>
+              <p class="text-sm text-zinc-400 leading-relaxed">{{ ability.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Inventário -->
+        <div
+          *ngIf="activeTab === 'inventory'"
+          class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div
+              *ngFor="let item of selectedFicha.inventory"
+              class="flex items-center justify-between bg-zinc-800 rounded-xl px-4 py-3"
+            >
+              <div>
+                <p class="text-sm font-medium text-white">{{ item.name }}</p>
+                <p class="text-xs text-zinc-500 mt-0.5">Categoria {{ item.category }}</p>
+              </div>
+              <span class="text-xs bg-zinc-700 text-zinc-400 rounded-lg px-2 py-1 font-mono">
+                {{ item.spaces }} espaço{{ item.spaces !== 1 ? 's' : '' }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 </div>
