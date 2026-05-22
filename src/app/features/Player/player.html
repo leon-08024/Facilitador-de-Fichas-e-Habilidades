@@ -1,0 +1,241 @@
+<div class="min-h-screen bg-zinc-950 text-white flex flex-col">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50">
+    <div class="h-[2px] bg-gradient-to-r from-transparent via-red-700 to-transparent"></div>
+    <div class="bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50">
+      <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Ordem_Paranormal_RPG_Logo.png"
+          alt="Ordem Paranormal"
+          class="h-7 w-auto brightness-0 invert">
+        <span class="text-zinc-500 text-xs tracking-widest uppercase hidden md:block">
+          {{ nomePlayer }}
+        </span>
+        <button (click)="logout()"
+          class="text-xs text-zinc-500 hover:text-red-400 tracking-widest uppercase transition-colors">
+          Sair
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SEM FICHA -->
+  <div *ngIf="!ficha" class="flex-1 flex items-center justify-center pt-14">
+    <div class="text-center">
+      <p class="text-zinc-500 text-sm tracking-widest uppercase mb-2">Nenhuma ficha encontrada</p>
+      <p class="text-zinc-600 text-xs">Fale com o mestre para criar sua ficha.</p>
+    </div>
+  </div>
+
+  <!-- FICHA -->
+  <div *ngIf="ficha" class="flex-1 pt-14 max-w-4xl mx-auto w-full px-4 py-6">
+
+    <!-- Header -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-4">
+      <div class="flex items-start justify-between gap-4 flex-wrap">
+        <div>
+          <h1 class="text-3xl font-bold tracking-tight">{{ ficha.name }}</h1>
+          <p class="text-zinc-400 mt-1">
+            <span class="text-red-500 font-medium">{{ ficha.class }}</span>
+            · {{ ficha.origin }}
+            · <span class="text-zinc-300">NEX {{ ficha.nex }}%</span>
+          </p>
+        </div>
+        <div class="flex gap-3 text-center">
+          <div class="bg-zinc-800 rounded-xl px-4 py-2">
+            <p class="text-xs text-zinc-500 uppercase tracking-wider">Defesa</p>
+            <p class="text-xl font-bold">{{ ficha.defesa }}</p>
+          </div>
+          <div class="bg-zinc-800 rounded-xl px-4 py-2">
+            <p class="text-xs text-zinc-500 uppercase tracking-wider">Proteção</p>
+            <p class="text-xl font-bold">{{ ficha.protecao }}</p>
+          </div>
+          <div class="bg-zinc-800 rounded-xl px-4 py-2">
+            <p class="text-xs text-zinc-500 uppercase tracking-wider">Desl.</p>
+            <p class="text-xl font-bold">{{ ficha.deslocamento }}m</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barras -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-6">
+        <div *ngFor="let stat of stats">
+          <div class="flex justify-between text-xs mb-1">
+            <span class="text-zinc-400">{{ stat.label }}</span>
+            <span class="font-mono text-white">
+              {{ ficha.currentStats[stat.key] }} / {{ ficha.maxStats[stat.key] }}
+            </span>
+          </div>
+          <div class="h-2 bg-zinc-700 rounded-full overflow-hidden">
+            <div
+              [class]="stat.color + ' h-full rounded-full transition-all duration-500'"
+              [style.width.%]="statPercent(ficha.currentStats[stat.key], ficha.maxStats[stat.key])">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Atributos Hexagonais -->
+    <div class="flex justify-center items-center my-4">
+      <svg viewBox="0 0 500 420" width="100%" style="max-width: 420px;">
+        <circle cx="250" cy="218" r="200" fill="none" stroke="#3f3f46" stroke-width="1" stroke-dasharray="2 4"/>
+        <circle cx="250" cy="218" r="192" fill="none" stroke="#52525b" stroke-width="0.5" stroke-dasharray="1 6"/>
+
+        <!-- Conectores -->
+        <line x1="250" y1="135" x2="250" y2="163" stroke="#71717a" stroke-width="4" stroke-linecap="round"/>
+        <line x1="250" y1="135" x2="250" y2="163" stroke="#09090b" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="340" y1="178" x2="314" y2="191" stroke="#71717a" stroke-width="4" stroke-linecap="round"/>
+        <line x1="340" y1="178" x2="314" y2="191" stroke="#09090b" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="340" y1="258" x2="314" y2="245" stroke="#71717a" stroke-width="4" stroke-linecap="round"/>
+        <line x1="340" y1="258" x2="314" y2="245" stroke="#09090b" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="160" y1="178" x2="186" y2="191" stroke="#71717a" stroke-width="4" stroke-linecap="round"/>
+        <line x1="160" y1="178" x2="186" y2="191" stroke="#09090b" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="160" y1="258" x2="186" y2="245" stroke="#71717a" stroke-width="4" stroke-linecap="round"/>
+        <line x1="160" y1="258" x2="186" y2="245" stroke="#09090b" stroke-width="1.5" stroke-linecap="round"/>
+
+        <!-- Central -->
+        <polygon points="250,163 292,187 292,235 250,259 208,235 208,187"
+          fill="#09090b" stroke="#a1a1aa" stroke-width="2"/>
+        <polygon points="250,168 288,190 288,231 250,253 212,231 212,190"
+          fill="none" stroke="#3f3f46" stroke-width="1"/>
+        <text x="250" y="215" text-anchor="middle" dominant-baseline="central"
+          fill="white" font-family="monospace" font-size="12" font-weight="900" letter-spacing="3">ATRIBUTOS</text>
+
+        <!-- AGI topo -->
+        <polygon points="250,44 292,68 292,116 250,140 208,116 208,68"
+          fill="#18181b" stroke="#a1a1aa" stroke-width="2"/>
+        <polygon points="250,49 288,71 288,112 250,134 212,112 212,71"
+          fill="none" stroke="#3f3f46" stroke-width="1"/>
+        <text x="250" y="82" text-anchor="middle" fill="#a1a1aa" font-family="sans-serif" font-size="8" font-weight="600" letter-spacing="2">AGILIDADE</text>
+        <text x="250" y="112" text-anchor="middle" fill="white" font-family="monospace" font-size="24" font-weight="900">AGI</text>
+        <text x="250" y="130" text-anchor="middle" fill="#e4e4e7" font-family="monospace" font-size="11">{{ ficha.attributes['AGI'] }}</text>
+
+        <!-- INT direita superior -->
+        <polygon points="338,90 380,114 380,162 338,186 296,162 296,114"
+          fill="#18181b" stroke="#a1a1aa" stroke-width="2"/>
+        <polygon points="338,95 376,117 376,158 338,180 300,158 300,117"
+          fill="none" stroke="#3f3f46" stroke-width="1"/>
+        <text x="338" y="128" text-anchor="middle" fill="#a1a1aa" font-family="sans-serif" font-size="8" font-weight="600" letter-spacing="2">INTELECTO</text>
+        <text x="338" y="158" text-anchor="middle" fill="white" font-family="monospace" font-size="24" font-weight="900">INT</text>
+        <text x="338" y="176" text-anchor="middle" fill="#e4e4e7" font-family="monospace" font-size="11">{{ ficha.attributes['INT'] }}</text>
+
+        <!-- VIG direita inferior -->
+        <polygon points="338,250 380,274 380,322 338,346 296,322 296,274"
+          fill="#18181b" stroke="#a1a1aa" stroke-width="2"/>
+        <polygon points="338,255 376,277 376,318 338,340 300,318 300,277"
+          fill="none" stroke="#3f3f46" stroke-width="1"/>
+        <text x="338" y="288" text-anchor="middle" fill="#a1a1aa" font-family="sans-serif" font-size="8" font-weight="600" letter-spacing="2">VIGOR</text>
+        <text x="338" y="318" text-anchor="middle" fill="white" font-family="monospace" font-size="24" font-weight="900">VIG</text>
+        <text x="338" y="336" text-anchor="middle" fill="#e4e4e7" font-family="monospace" font-size="11">{{ ficha.attributes['VIG'] }}</text>
+
+        <!-- PRE esquerda inferior -->
+        <polygon points="162,250 204,274 204,322 162,346 120,322 120,274"
+          fill="#18181b" stroke="#a1a1aa" stroke-width="2"/>
+        <polygon points="162,255 200,277 200,318 162,340 124,318 124,277"
+          fill="none" stroke="#3f3f46" stroke-width="1"/>
+        <text x="162" y="288" text-anchor="middle" fill="#a1a1aa" font-family="sans-serif" font-size="8" font-weight="600" letter-spacing="2">PRESENÇA</text>
+        <text x="162" y="318" text-anchor="middle" fill="white" font-family="monospace" font-size="24" font-weight="900">PRE</text>
+        <text x="162" y="336" text-anchor="middle" fill="#e4e4e7" font-family="monospace" font-size="11">{{ ficha.attributes['PRE'] }}</text>
+
+        <!-- FOR esquerda superior -->
+        <polygon points="162,90 204,114 204,162 162,186 120,162 120,114"
+          fill="#18181b" stroke="#a1a1aa" stroke-width="2"/>
+        <polygon points="162,95 200,117 200,158 162,180 124,158 124,117"
+          fill="none" stroke="#3f3f46" stroke-width="1"/>
+        <text x="162" y="128" text-anchor="middle" fill="#a1a1aa" font-family="sans-serif" font-size="8" font-weight="600" letter-spacing="2">FORÇA</text>
+        <text x="162" y="158" text-anchor="middle" fill="white" font-family="monospace" font-size="24" font-weight="900">FOR</text>
+        <text x="162" y="176" text-anchor="middle" fill="#e4e4e7" font-family="monospace" font-size="11">{{ ficha.attributes['FOR'] }}</text>
+      </svg>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-1 mb-4 bg-zinc-900 border border-zinc-800 rounded-xl p-1 w-fit">
+      <button *ngFor="let tab of tabs"
+        (click)="setTab(tab.id)"
+        [class.bg-zinc-700]="activeTab === tab.id"
+        [class.text-white]="activeTab === tab.id"
+        [class.text-zinc-500]="activeTab !== tab.id"
+        class="px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-150">
+        {{ tab.label }}
+      </button>
+    </div>
+
+    <!-- Tab: Perícias -->
+    <div *ngIf="activeTab === 'stats'" class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+        <div *ngFor="let skill of getSkillEntries(ficha.skills)"
+          class="flex justify-between items-center bg-zinc-800 rounded-lg px-3 py-2">
+          <span class="text-sm text-zinc-300">{{ skill[0] }}</span>
+          <span class="font-mono font-bold text-white text-sm">{{ skill[1] }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: Ataques -->
+    <div *ngIf="activeTab === 'attacks'" class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5">
+      <div class="space-y-3">
+        <div *ngFor="let attack of ficha.attacks"
+          class="grid grid-cols-2 md:grid-cols-5 gap-3 bg-zinc-800 rounded-xl p-4 items-center">
+          <div class="col-span-2 md:col-span-1">
+            <p class="font-semibold text-white">{{ attack.name }}</p>
+          </div>
+          <div class="text-center">
+            <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Teste</p>
+            <p class="font-mono text-sm text-green-400">{{ attack.test }}</p>
+          </div>
+          <div class="text-center">
+            <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Dano</p>
+            <p class="font-mono text-sm text-red-400">{{ attack.damage }}</p>
+          </div>
+          <div class="text-center">
+            <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Crítico</p>
+            <p class="font-mono text-sm text-yellow-400">{{ attack.critical }}</p>
+          </div>
+          <div class="text-center">
+            <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-0.5">Alcance</p>
+            <p class="font-mono text-sm text-blue-400">{{ attack.range }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: Habilidades -->
+    <div *ngIf="activeTab === 'abilities'" class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5">
+      <div class="space-y-3">
+        <div *ngFor="let ability of ficha.abilities" class="bg-zinc-800 rounded-xl p-4">
+          <div class="flex items-center justify-between mb-1">
+            <p class="font-semibold text-white">{{ ability.name }}</p>
+            <span *ngIf="ability.cost > 0"
+              class="text-xs bg-blue-900/50 text-blue-300 border border-blue-800 rounded-full px-2 py-0.5">
+              {{ ability.cost }} PE
+            </span>
+            <span *ngIf="ability.cost === 0"
+              class="text-xs bg-zinc-700 text-zinc-400 rounded-full px-2 py-0.5">
+              Passiva
+            </span>
+          </div>
+          <p class="text-sm text-zinc-400 leading-relaxed">{{ ability.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: Inventário -->
+    <div *ngIf="activeTab === 'inventory'" class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div *ngFor="let item of ficha.inventory"
+          class="flex items-center justify-between bg-zinc-800 rounded-xl px-4 py-3">
+          <div>
+            <p class="text-sm font-medium text-white">{{ item.name }}</p>
+            <p class="text-xs text-zinc-500 mt-0.5">Categoria {{ item.category }}</p>
+          </div>
+          <span class="text-xs bg-zinc-700 text-zinc-400 rounded-lg px-2 py-1 font-mono">
+            {{ item.spaces }} espaço{{ item.spaces !== 1 ? 's' : '' }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
