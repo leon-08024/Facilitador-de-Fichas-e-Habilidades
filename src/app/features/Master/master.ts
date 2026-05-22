@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import fichasData from '../../assets/fichas.json';
+import fichasData from './fichas.json';
 
 type TabId = 'stats' | 'attacks' | 'abilities' | 'inventory';
 

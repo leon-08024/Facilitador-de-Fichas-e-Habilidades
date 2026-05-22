@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import usersData from '../../assets/users.json';
+import usersData from './users.json';
 import { Router } from '@angular/router';
 
 interface User {
