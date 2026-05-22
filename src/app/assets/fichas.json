@@ -1,43 +1,237 @@
-{
-  "id": "f1",
-  "ownerId": "u1",
-  "name": "Placeholder",
-  "class": "Placeholder",
-  "origin": "Policial",
-  "nex": 0,
-  "attributes": {
-    "FOR": 1, "AGI": 1, "INT": 1, "PRE": 1, "VIG": 1
+[
+  {
+    "id": "f1",
+    "ownerId": "u1",
+    "name": "Akkiel",
+    "class": "Ocultista - Investigador Paranormal",
+    "origin": "Fanático por Criaturas",
+    "nex": 10,
+    "attributes": {
+      "FOR": 1,
+      "AGI": 1,
+      "INT": 3,
+      "PRE": 3,
+      "VIG": 1
+    },
+    "maxStats": {
+      "PV": 19,
+      "PE": 21,
+      "SAN": 30
+    },
+    "currentStats": {
+      "PV": 19,
+      "PE": 21,
+      "SAN": 30
+    },
+    "defesa": 11,
+    "protecao": 0,
+    "deslocamento": 9,
+    "peRodada": 3,
+    "skills": {
+      "Diplomacia": 5,
+      "Iniciativa": 5,
+      "Investigação": 8,
+      "Ocultismo": 8,
+      "Pilotagem": 5,
+      "Pontaria": 5,
+      "Reflexos": 5,
+      "Tecnologia": 5,
+      "Vontade": 5
+    },
+    "attacks": [],
+    "abilities": [
+      {
+        "name": "Conhecimento Oculto",
+        "cost": 0,
+        "description": "Você pode fazer testes de Ocultismo para identificar criatura a partir de informações como uma imagem, rastros, indícios de sua presença ou outras pistas que o mestre considere suficientes. Se passar, você descobre as características da criatura (conforme descrito na perícia), mas não sua identidade ou tipo específico. Além disso, quando passa em um teste de Ocultismo para identificar criatura, você recebe também +2 em todos os testes contra a criatura até o fim da missão."
+      },
+      {
+        "name": "Grimório de Evidências",
+        "cost": 1,
+        "description": "Uso: Uma vez acada 3 rodadas Efeito: Ao encontrar uma criatura ou uma ameaça paranormal, Akkiel pode fazer um teste de Investigação ou Ocultismo (DT 15 + 5 por 60 de VD da ameaça). Se passar, ele adiciona +1d6 ( + 1  dado  a cada 15% de NEX) de dano (do tipo que a criatura é vulnerável) ao seu próximo ataque ou ao ataque de um aliado que ele instruir. Além disso, ele recebe +5 em testes de Vontade contra essa ameaça específica durante na cena"
+      },
+      {
+        "name": "Expurgar o Paranormal",
+        "cost": 1,
+        "description": "EXECUÇÃO. Completa; ALCANCE. Curto; ALVO. 1 criatura (este ritual pode afetar criaturas); DURAÇÃO. Instantânea; RESISTÊNCIA. Veja o texto; Focando toda sua ligação com o Paranormal em suas mãos, você é capaz de criar uma concentração de por puro do Outro Lado, sendo capaz de expurgar a própria existência de seres Paranormais. Você então, realiza um disparo em uma criatura em alcance curto, fazendo com que ela tenha que realizar um teste de Reflexos. Se passar, é atingida de raspão, perdendo 5% de seus PV totais. Caso passe por 5 pontos ou mais, evita completamente o dano. Se falhar, perderá 10% de seus PV totais e deverá realizar um teste de Vontade. Caso passe, nada irá ocorrer, mas se falhar, irá perder mais 10% de seus PV totais. Bônus em testes de manobra por tamanho também se aplicam nos testes de resistência deste ritual. Após conjurar este ritual, você sofre -2d20 em testes de resistência contra efeitos Paranormais até o início de seu próximo turno."
+      },
+      {
+        "name": "Desfazer Sinapses",
+        "cost": 1,
+        "description": "Execução padrão; Alcance curto; Alvo 1 ser; Duração instantânea; Resistência Vontade parcial; Enganam-se aqueles que pensam que o Conhecimento Paranormal é incapaz de causar dano físico; inexistir é um dos processos mais terríveis que podem acontecer com alguém. A entidade do Conhecimento inexiste bilhões de neurônios de dentro do cérebro do alvo, causando a angústia inexplicável do vazio. O alvo sofre 2d6+2 pontos de dano de Conhecimento e fica frustrado por uma rodada. Se passar no teste de resistência, sofre apenas metade do dano e evita a condição. O alvo precisa ter um cérebro; o efeito se reflete como uma dor de cabeça severa que faz sangrar levemente pelos olhos, narinas, orelhas e boca."
+      },
+      {
+        "name": "PALAVRAS DA DOR",
+        "cost": 1,
+        "description": "EXECUÇÃO. Padrão; ALCANCE. Médio; ALVO. 1 ser; DURAÇÃO. Instantânea; RESISTÊNCIA. Reflexos anula; Você proclama uma onomatopeia, lançando-a na direção de um alvo. Ao ser atingido, ele irá sofrer 4d4 de dano relacionada a onomatopeia proferida. Após utilizar o ritual, o alvo fica com a garganta seca e rouco, sofrendo -2 em Diplomacia, Enganação e Intimidação até que beba água. A seguir, estão alguns exemplos de onomatopeias e seus tipos de dano. Novas onomatopeias podem ser criadas à critério do mestre. BANG. O alvo é atingido pela onomatopeia, como se ela fosse uma bala, atravessando seu corpo. O tipo de dano causado é Balístico. BRRR. Ao atingir o alvo, ele sente um frio intenso. O tipo de dano causado é Frio. CRACKLE. Uma chama surge ao atingir o alvo, o queimando. O tipo de dano causado é Fogo. DRIP. A onomatopeia gruda na pele do alvo, começando a derreter sua pele. O tipo de dano causado é Químico. HMM. A onomatopeia se funde a cabeça do alvo, enchendo-as de pensamentos, causando uma dor de cabeça terrível. O tipo de dano causado é Conhecimento. NHAC. A letra C cria dentes e morde o alvo. O tipo de dano causado é Perfuração. POW. A onomatopeia avança em alta velocidade, atingindo o alvo com muita força. O tipo de dano causado é Impacto. ZUM. A onomatopeia se torna afiada, se movendo em alta velocidade, cortando a pele do alvo. O tipo de dano causado é Corte. ZAP. Um relâmpago se propaga a partir da onomatopeia, atingindo o alvo. O tipo de dano causado é Eletricidade"
+      },
+      {
+        "name": "Consumir Manancial",
+        "cost": 1,
+        "description": "Execução: padrão; Alcance: pessoal; Alvo: você; Duração: instantânea; Você suga uma pequena porção do tempo de vida de plantas, insetos e até mesmo do solo ao redor, gerandoLodo e recebendo 3d6 pontos de vida temporários. Os PV temporários desaparecem ao final da cena."
+      },
+      {
+        "name": "Decadência",
+        "cost": 1,
+        "description": "Execução: padrão; Alcance: toque; Alvo: 1 ser; Duração: instantânea; Resistência: Fortitude reduz à metade; Espirais de trevas envolvem sua mão e definham o alvo, que sofre 2d8+2 pontos de dano de Morte."
+      },
+      {
+        "name": "O Conhecimento",
+        "cost": 0,
+        "description": "Você possui uma mente enciclopédica sobre o paranormal; você recebe +3 em testes de Investigação e Ocultismo. Além disso, seu limite de PE por turno aumenta em +1 imediatamente e em mais +2 a cada 15% de NEX adicionais."
+      }
+    ],
+    "inventory": [
+      {
+        "id": "i1",
+        "name": "Mochila Militar",
+        "category": "I",
+        "spaces": 0
+      },
+      {
+        "id": "i2",
+        "name": "Componente conhecimento",
+        "category": "0",
+        "spaces": 1
+      },
+      {
+        "id": "i3",
+        "name": "Componente morte",
+        "category": "0",
+        "spaces": 1
+      },
+      {
+        "id": "i4",
+        "name": "Componente energia",
+        "category": "0",
+        "spaces": 1
+      },
+      {
+        "id": "i5",
+        "name": "Escuta de R.P",
+        "category": "II",
+        "spaces": 1
+      }
+    ]
   },
-  "maxStats": {
-    "PV": 1, "PE": 1, "SAN": 1
-  },
-  "currentStats": {
-    "PV": 1, "PE": 1, "SAN": 1
-  },
-  "defesa": 0,
-  "protecao": 0,
-  "deslocamento": 0,
-  "skills": {
-    "Atletismo": 1, "Luta": 1, "Pontaria": 1
-  },
-  "attacks": [
-    {
-      "name": "Placeholder",
-      "test": "+9",
-      "damage": "2d6+2",
-      "critical": "18",
-      "range": "20m"
-    }
-  ],
-  "abilities": [
-    {
-      "name": "Placeholder",
-      "cost": 0,
-      "description": "Placeholder."
-    }
-  ],
-  "inventory": [
-    { "id": "i1", "name": "Placeholder", "category": "II", "spaces": 1 },
-    { "id": "i2", "name": "Placeholder", "category": "I", "spaces": 2 }
-  ]
-}
+  {
+    "id": "f2",
+    "ownerId": "u2",
+    "name": "Roberta dos Santos",
+    "class": "Especialista - Atirador de Elite",
+    "origin": "Militar",
+    "nex": 10,
+    "attributes": {
+      "FOR": 2,
+      "AGI": 3,
+      "INT": 2,
+      "PRE": 1,
+      "VIG": 1
+    },
+    "maxStats": {
+      "PV": 25,
+      "PE": 12,
+      "SAN": 24
+    },
+    "currentStats": {
+      "PV": 25,
+      "PE": 12,
+      "SAN": 24
+    },
+    "defesa": 18,
+    "protecao": 0,
+    "deslocamento": 9,
+    "peRodada": 2,
+    "skills": {
+      "Furtividade": 5,
+      "Iniciativa": 5,
+      "Investigação": 5,
+      "Pontaria": 5,
+      "Profissão (Fuzileira)": 5,
+      "Reflexos": 5,
+      "Sobrevivência": 5,
+      "Tática": 5,
+      "Vontade": 5
+    },
+    "attacks": [
+      {
+        "name": "Rifle de Caça",
+        "test": "3D20",
+        "damage": "2d8+4",
+        "critical": "19x3",
+        "range": "12m"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Eclético",
+        "cost": 2,
+        "description": "+5 em um teste de perícia não treinada."
+      },
+      {
+        "name": "Perito",
+        "cost": 2,
+        "description": "+1d6 nos testes de perícia de Furtividade e Tática."
+      },
+      {
+        "name": "Para Bellum",
+        "cost": 0,
+        "description": "+2 de dano com armas de fogo."
+      },
+      {
+        "name": "Mergulho Mental",
+        "cost": 0,
+        "description": "Uso: uma vez a cada rodada; Efeito: Fragmentos e flashes de memorias violentas que não parecem ser de Roberta surgem na mente dela em momentos de tensão permitindo que ela mergulhe nesses fragmentos e procure brechas em seus inimigos. Em uma cena de combate Roberta pode usar Perito em testes de pontaria. E Roberta pode mergulhar mais fundo deixando a memória muscular tomar cada vez mais conta, ela adiciona +2d6 no teste de pontaria, mas as visões são tão intensas que ela sofre 1d6 de dano mental e fica Vulnerável até o final da rodada. "
+      },
+      {
+        "name": "Mira de Elite",
+        "cost": 0,
+        "description": "Adiciona Intelecto no dano de alto calibre."
+      }
+    ],
+    "inventory": [
+      {
+        "id": "i1",
+        "name": "Rifle de Caça Alongado",
+        "category": "II",
+        "spaces": 2
+      },
+      {
+        "id": "i2",
+        "name": "Balas Longas",
+        "category": "I",
+        "spaces": 1
+      },
+      {
+        "id": "i3",
+        "name": "Balas Longas",
+        "category": "P",
+        "spaces": 1
+      },
+      {
+        "id": "i4",
+        "name": "Bandoleira",
+        "category": "I",
+        "spaces": 1
+      },
+      {
+        "id": "i5",
+        "name": "Proteção Leve",
+        "category": "I",
+        "spaces": 2
+      },
+      {
+        "id": "i6",
+        "name": "Granada de Tinta x2",
+        "category": "0",
+        "spaces": 2
+      },
+      {
+        "id": "i7",
+        "name": "Granada de Atordoamento",
+        "category": "0",
+        "spaces": 1
+      }
+    ]
+  }
+]

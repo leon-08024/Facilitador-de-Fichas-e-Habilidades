@@ -57,6 +57,7 @@ interface Ficha {
   defesa: number;
   protecao: number;
   deslocamento: number;
+  peRodada: number;
   skills: Record<string, number>;
   attacks: Attack[];
   abilities: Ability[];
@@ -97,9 +98,10 @@ export class MasterPageComponent implements OnInit {
 
   constructor(private router: Router) {}
 
+  
   ngOnInit() {
     // Suporta tanto array quanto objeto único
-    this.fichas = Array.isArray(fichasData) ? fichasData : [fichasData];
+    this.fichas = (Array.isArray(fichasData) ? fichasData : [fichasData]) as unknown as Ficha[]; 
     if (this.fichas.length > 0) this.selectedFicha = this.fichas[0];
   }
 

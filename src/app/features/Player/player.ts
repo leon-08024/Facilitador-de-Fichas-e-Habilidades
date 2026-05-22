@@ -22,6 +22,7 @@ interface Ficha {
   defesa: number;
   protecao: number;
   deslocamento: number;
+  peRodada: number;
   skills: Record<string, number>;
   attacks: { name: string; test: string; damage: string; critical: string; range: string }[];
   abilities: { name: string; cost: number; description: string }[];
@@ -62,7 +63,7 @@ export class PlayerPageComponent implements OnInit {
     const currentUser = JSON.parse(raw);
     this.nomePlayer = currentUser.nome;
 
-    const todas: Ficha[] = Array.isArray(fichasData) ? fichasData : [fichasData];
+    const todas = (Array.isArray(fichasData) ? fichasData : [fichasData]) as unknown as Ficha[];
     this.ficha = todas.find(f => f.ownerId === currentUser.user) ?? null;
   }
 
