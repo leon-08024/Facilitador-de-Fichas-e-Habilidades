@@ -37,6 +37,7 @@ interface Ficha {
   styleUrls: ['./player.scss']
 })
 export class PlayerPageComponent implements OnInit {
+  fichas: Ficha[] = [];
   ficha: Ficha | null = null;
   activeTab: TabId = 'stats';
   nomePlayer = '';
@@ -54,7 +55,7 @@ export class PlayerPageComponent implements OnInit {
     { id: 'inventory' as TabId, label: 'Inventário' },
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
     const raw = localStorage.getItem('currentUser');
@@ -64,7 +65,13 @@ export class PlayerPageComponent implements OnInit {
     this.nomePlayer = currentUser.nome;
 
     const todas = (Array.isArray(fichasData) ? fichasData : [fichasData]) as unknown as Ficha[];
-    this.ficha = todas.find(f => f.ownerId === currentUser.user) ?? null;
+    this.fichas = todas.filter(f => f.ownerId === currentUser.user);
+    this.ficha = this.fichas[0] ?? null;
+  }
+
+  selectFicha(ficha: Ficha) {
+    this.ficha = ficha;
+    this.activeTab = 'stats';
   }
 
   setTab(tab: TabId) { this.activeTab = tab; }
@@ -73,6 +80,12 @@ export class PlayerPageComponent implements OnInit {
 
   statPercent(current: number, max: number): number {
     return max > 0 ? Math.min(100, (current / max) * 100) : 0;
+  }
+  alterarStat(key: StatKey, delta: number) {
+    if (!this.ficha) return;
+    const atual = this.ficha.currentStats[key];
+    const max = this.ficha.maxStats[key];
+    this.ficha.currentStats[key] = Math.min(max, Math.max(0, atual + delta));
   }
 
   logout() {
