@@ -238,7 +238,7 @@
     "id": "f3",
     "ownerId": "u3",
     "name": "Calandri Narattwin",
-    "class": "Combatente",
+    "class": "Combatente - Aniquilador",
     "origin": "Lutador",
     "nex": 10,
     "attributes": {
@@ -274,8 +274,8 @@
         "name": "Claymore",
         "test": "3d20",
         "damage": "2d6+FOR",
-        "critical": "19",
-        "range": "x2"
+        "critical": "19x2",
+        "range": "Corpo a Corpo"
       }
     ],
     "abilities": [
@@ -303,7 +303,13 @@
         "name": "Sanguinária",
         "cost": 0,
         "description": "2x ataque causando 2d6 de dano de sangue. Se critar, recupera +2d10 PV temporários."
+      },
+      {
+        "name": "Maldição da Claymore",
+        "cost": 0,
+        "description":" Sempre que falha em um teste baseado em Força ou Vigor, para cada maldição de Sangue em seus itens, você perde 2 pontos de Sanidade."
       }
+      
     ],
     "inventory": [
       {
@@ -328,9 +334,9 @@
   },
   {
     "id": "f4",
-    "ownerId": "u1",
+    "ownerId": "u4",
     "name": "Rui Martirez",
-    "class": "Especialista Performático",
+    "class": "Especialista - Performático",
     "origin": "Artista",
     "nex": 10,
     "attributes": {
@@ -380,7 +386,7 @@
       {
         "name": "Magnun Opus",
         "cost": 0,
-        "description": "Página 17. Habilidade especial do Especialista Performático."
+        "description": " Você é famoso por uma de suas obras. Uma vez por missão, pode determinar que uma pessoa envolvida em uma cena de interação o reconheça. Você recebe +5 em testes de Presença e de perícias baseadas em Presença contra aquela pessoa. A critério do mestre, pode receber esse bônus em outras situações nas quais seria reconhecido."
       },
       {
         "name": "Eclético",
@@ -395,12 +401,12 @@
       {
         "name": "Mixagem de Campo",
         "cost": 1,
-        "description": "Habilidade de campo do Especialista Performático."
+        "description": "Uso: Uma Vez por cena; Alcance: Medio; Efeito: Rui usa de seu equipamento musical na sua sholder bag para atrapalhar um inimigo. Rui pode usar uma Ação Padrão para atrapalhar um inimigo à distância; o alvo deve fazer um teste de Vontade (DT 10 + presença do Rui + metade do NEX (arrendondando pra baixo)) ou ficará Vuneravel até o final da rodada. "
       },
       {
         "name": "Ensaio",
         "cost": 0,
-        "description": "+1 na margem de ameaça. (Página 119)"
+        "description": "+1 na margem de ameaça de seus ataques até o início da próxima cena de interlúdio. "
       }
     ],
     "inventory": [
@@ -430,7 +436,7 @@
       },
       {
         "id": "i5",
-        "name": "Era de Aura Paranormal",
+        "name": "Câmera de Aura Paranormal",
         "category": "II",
         "spaces": 1
       },
