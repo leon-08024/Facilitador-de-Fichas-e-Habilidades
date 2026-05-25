@@ -302,7 +302,7 @@
       {
         "name": "Sanguinária",
         "cost": 0,
-        "description": "2x ataque causando 2d6 de dano de sangue. Se critar, recupera +2d10 PV temporários."
+        "description": "Atacando duas vezes o alvo começa a snagrar levando 2d6 de dano de sangramento. Se critar, recupera +2d10 PV temporários."
       },
       {
         "name": "Maldição da Claymore",
