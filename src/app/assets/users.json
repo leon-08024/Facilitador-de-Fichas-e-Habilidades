@@ -19,6 +19,20 @@
       "password": "1234",
       "role": "player",
       "nome": "Cenci"
+    },
+    {
+      "user": "u3",
+      "username": "Art",
+      "password": "1234",
+      "role": "player",
+      "nome": "Art"
+    },
+    {
+      "user": "u4",
+      "username": "Bruno",
+      "password": "1234",
+      "role": "player",
+      "nome": "Bruno"
     }
   ]
 }
