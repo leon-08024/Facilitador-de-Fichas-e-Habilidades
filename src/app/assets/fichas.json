@@ -233,5 +233,225 @@
         "spaces": 1
       }
     ]
+  },
+  {
+    "id": "f3",
+    "ownerId": "u3",
+    "name": "Calandri Narattwin",
+    "class": "Combatente",
+    "origin": "Lutador",
+    "nex": 10,
+    "attributes": {
+      "FOR": 3,
+      "AGI": 2,
+      "INT": 1,
+      "PRE": 1,
+      "VIG": 2
+    },
+    "maxStats": {
+      "PV": 34,
+      "PE": 9,
+      "SAN": 18
+    },
+    "currentStats": {
+      "PV": 34,
+      "PE": 9,
+      "SAN": 18
+    },
+    "defesa": 17,
+    "protecao": 0,
+    "deslocamento": 9,
+    "peRodada": 2,
+    "skills": {
+      "Fortitude": 5,
+      "Luta": 5,
+      "Pontaria": 5,
+      "Reflexos": 5,
+      "Vontade": 5
+    },
+    "attacks": [
+      {
+        "name": "Claymore",
+        "test": "3d20",
+        "damage": "2d6+FOR",
+        "critical": "19",
+        "range": "x2"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Mão Pesada",
+        "cost": 0,
+        "description": "+2 em rolagens de dano."
+      },
+      {
+        "name": "Ataque Especial",
+        "cost": 2,
+        "description": "+5 em rolagem de acerto ou dano."
+      },
+      {
+        "name": "Surto Clandestino",
+        "cost": 0,
+        "description": "Uso: uma vez a cada rodada; Efeito: Fragmentos e flashes de memorias violentas que não parecem ser de Roberta surgem na mente dela em momentos de tensão permitindo que ela mergulhe nesses fragmentos e procure brechas em seus inimigos. Em uma cena de combate Roberta pode usar Perito em testes de pontaria. E Roberta pode mergulhar mais fundo deixando a memória muscular tomar cada vez mais conta, ela adiciona +2d6 no teste de pontaria, mas as visões são tão intensas que ela sofre 1d6 de dano mental e fica Vulnerável até o final da rodada. "
+      },
+      {
+        "name": "A Favorita",
+        "cost": 0,
+        "description": "Claymore com -1 de categoria."
+      },
+      {
+        "name": "Sanguinária",
+        "cost": 0,
+        "description": "2x ataque causando 2d6 de dano de sangue. Se critar, recupera +2d10 PV temporários."
+      }
+    ],
+    "inventory": [
+      {
+        "id": "i1",
+        "name": "Claymore Sanguinária",
+        "category": "I",
+        "spaces": 2
+      },
+      {
+        "id": "i2",
+        "name": "Proteção Leve",
+        "category": "I",
+        "spaces": 2
+      },
+      {
+        "id": "i3",
+        "name": "Bandoleira",
+        "category": "I",
+        "spaces": 1
+      }
+    ]
+  },
+  {
+    "id": "f4",
+    "ownerId": "u1",
+    "name": "Rui Martirez",
+    "class": "Especialista Performático",
+    "origin": "Artista",
+    "nex": 10,
+    "attributes": {
+      "FOR": 1,
+      "AGI": 2,
+      "INT": 2,
+      "PRE": 3,
+      "VIG": 1
+    },
+    "maxStats": {
+      "PV": 25,
+      "PE": 18,
+      "SAN": 24
+    },
+    "currentStats": {
+      "PV": 25,
+      "PE": 18,
+      "SAN": 24
+    },
+    "defesa": 12,
+    "protecao": 0,
+    "deslocamento": 9,
+    "peRodada": 2,
+    "skills": {
+      "Artes": 5,
+      "Atualidades": 5,
+      "Enganação": 5,
+      "Fortitude": 5,
+      "Iniciativa": 5,
+      "Intuição": 5,
+      "Medicina": 5,
+      "Percepção": 5,
+      "Pontaria": 5,
+      "Reflexos": 5,
+      "Vontade": 5
+    },
+    "attacks": [
+      {
+        "name": "Revólver",
+        "test": "2D20+5",
+        "damage": "2D6",
+        "critical": "19",
+        "range": "x2"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Magnun Opus",
+        "cost": 0,
+        "description": "Página 17. Habilidade especial do Especialista Performático."
+      },
+      {
+        "name": "Eclético",
+        "cost": 2,
+        "description": "+5 em perícia não treinada. (Página 28)"
+      },
+      {
+        "name": "Perito",
+        "cost": 2,
+        "description": "+1d6 em perícia. (Página 28)"
+      },
+      {
+        "name": "Mixagem de Campo",
+        "cost": 1,
+        "description": "Habilidade de campo do Especialista Performático."
+      },
+      {
+        "name": "Ensaio",
+        "cost": 0,
+        "description": "+1 na margem de ameaça. (Página 119)"
+      }
+    ],
+    "inventory": [
+      {
+        "id": "i1",
+        "name": "Revólver",
+        "category": "I",
+        "spaces": 1
+      },
+      {
+        "id": "i2",
+        "name": "Balas Curtas",
+        "category": "0",
+        "spaces": 1
+      },
+      {
+        "id": "i3",
+        "name": "Balas Curtas",
+        "category": "0",
+        "spaces": 1
+      },
+      {
+        "id": "i4",
+        "name": "Saxofone",
+        "category": "0",
+        "spaces": 1
+      },
+      {
+        "id": "i5",
+        "name": "Era de Aura Paranormal",
+        "category": "II",
+        "spaces": 1
+      },
+      {
+        "id": "i6",
+        "name": "Granada de Atordoamento",
+        "category": "0",
+        "spaces": 1
+      },
+      {
+        "id": "i7",
+        "name": "Bandoleira",
+        "category": "I",
+        "spaces": 1
+      },
+      {
+        "id": "i8",
+        "name": "Mochila Militar",
+        "category": "I",
+        "spaces": 0
+      }
+    ]
   }
 ]
