@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import usersData from '../../assets/users.json';
@@ -19,7 +18,7 @@ interface User {
   styleUrl: './home.scss'
 })
 export class Home {
-username = '';
+  username = '';
   password = '';
   error = '';
   loading = false;
@@ -32,27 +31,29 @@ username = '';
     this.error = '';
     this.loading = true;
 
-    // Simula delay de rede
     await new Promise(resolve => setTimeout(resolve, 600));
 
-    const user = this.users.find(u => 
-      u.username.toLowerCase() === this.username.toLowerCase() && 
+    const user = this.users.find(u =>
+      u.username.toLowerCase() === this.username.toLowerCase() &&
       u.password === this.password
     );
 
     if (user) {
-      // Salva no localStorage (simples)
       localStorage.setItem('currentUser', JSON.stringify(user));
-      
-      if (user.role === 'mestre') {
-        this.router.navigate(['/master']);
-      } else {
-        this.router.navigate(['/player']);
-      }
+      this.redirectByRole(user.role);
     } else {
-      this.error = 'Usuário ou senha incorretos!';
+      this.error = 'Usuário ou senha incorretos.';
     }
 
     this.loading = false;
+  }
+
+  private redirectByRole(role: string): void {
+    switch (role) {
+      case 'mestre':       this.router.navigate(['/master']);      break;
+      case 'player':       this.router.navigate(['/player']);      break;
+      case 'estrangeiro':  this.router.navigate(['/estrangeiro']); break;
+      default:             this.router.navigate(['/']);             break;
+    }
   }
 }

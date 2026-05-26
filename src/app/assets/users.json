@@ -7,32 +7,34 @@
       "nome": "Mestre"
     },
     {
-      "user": "u1",
       "username": "Bambinelson",
       "password": "vfoN1o16!C7j",
       "role": "player",
       "nome": "Bambinelson"
     },
     {
-      "user": "u2",
       "username": "Cenci",
       "password": "78B5_gJa#{JB",
       "role": "player",
       "nome": "Cenci"
     },
     {
-      "user": "u3",
       "username": "Art",
       "password": "LwQ0-a8$Op4i",
       "role": "player",
       "nome": "Art"
     },
     {
-      "user": "u4",
       "username": "Bruno",
       "password": "ClA9/&1o%68O",
       "role": "player",
       "nome": "Bruno"
+    },
+    {
+      "username": "estrangeiro",
+      "password": "TROQUE-ESTA-SENHA",
+      "role": "estrangeiro",
+      "nome": "O Estrangeiro"
     }
   ]
 }

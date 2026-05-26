@@ -1,10 +1,6 @@
 import { Routes } from '@angular/router';
 import { Home } from './features/Home/home';
-import { MasterPageComponent } from './features/Master/master';
-import { PlayerPageComponent } from './features/Player/player';
-import { authGuard, masterGuard, playerGuard } from './guards/auth.guard';
-
-
+import { authGuard, masterGuard, playerGuard, estrangeiroGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -17,6 +13,11 @@ export const routes: Routes = [
     path: 'player',
     loadComponent: () => import('./features/Player/player').then(m => m.PlayerPageComponent),
     canActivate: [playerGuard]
+  },
+  {
+    path: 'estrangeiro',
+    loadComponent: () => import('./features/Estrangeiro/estrangeiro').then(m => m.EstrangeiroPageComponent),
+    canActivate: [estrangeiroGuard]
   },
   { path: '**', redirectTo: '' }
 ];
