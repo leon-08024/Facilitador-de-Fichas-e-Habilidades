@@ -1,36 +1,42 @@
 {
   "users": [
     {
+      "id": "m1",
       "username": "mestre",
-      "password": "uu37I+6S#6Qv",
+      "password": "paodebatata",
       "role": "mestre",
       "nome": "Mestre"
     },
     {
+      "id": "u1",
       "username": "Bambinelson",
       "password": "vfoN1o16!C7j",
       "role": "player",
       "nome": "Bambinelson"
     },
     {
+      "id": "u2",
       "username": "Cenci",
       "password": "78B5_gJa#{JB",
       "role": "player",
       "nome": "Cenci"
     },
     {
+      "id": "u3",
       "username": "Art",
       "password": "LwQ0-a8$Op4i",
       "role": "player",
       "nome": "Art"
     },
     {
+      "id": "u4",
       "username": "Bruno",
-      "password": "ClA9/&1o%68O",
+      "password": "80085boobs@",
       "role": "player",
       "nome": "Bruno"
     },
     {
+      "id": "e1",
       "username": "estrangeiro",
       "password": "TROQUE-ESTA-SENHA",
       "role": "estrangeiro",

@@ -61,11 +61,19 @@ export class PlayerPageComponent implements OnInit {
     const raw = localStorage.getItem('currentUser');
     if (!raw) { this.router.navigate(['/']); return; }
 
-    const currentUser = JSON.parse(raw);
-    this.nomePlayer = currentUser.nome;
+    const currentUser = JSON.parse(raw) as {
+      id?: string;
+      user?: string;
+      username?: string;
+      nome?: string;
+    };
+    this.nomePlayer = currentUser.nome ?? '';
 
     const todas = (Array.isArray(fichasData) ? fichasData : [fichasData]) as unknown as Ficha[];
-    this.fichas = todas.filter(f => f.ownerId === currentUser.user);
+    const ownerIds = [currentUser.id, currentUser.user, currentUser.username, currentUser.nome]
+      .filter((value): value is string => typeof value === 'string' && value.trim().length > 0);
+
+    this.fichas = todas.filter(f => ownerIds.includes(f.ownerId));
     this.ficha = this.fichas[0] ?? null;
   }
 

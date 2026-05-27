@@ -5,6 +5,7 @@ import usersData from '../../assets/users.json';
 import { Router } from '@angular/router';
 
 interface User {
+  id: string;
   username: string;
   password: string;
   role: string;
