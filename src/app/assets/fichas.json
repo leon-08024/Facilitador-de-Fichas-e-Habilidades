@@ -122,9 +122,9 @@
     "origin": "Militar",
     "nex": 10,
     "attributes": {
-      "FOR": 2,
+      "FOR": 1,
       "AGI": 3,
-      "INT": 2,
+      "INT": 3,
       "PRE": 1,
       "VIG": 1
     },
@@ -138,7 +138,7 @@
       "PE": 12,
       "SAN": 24
     },
-    "defesa": 18,
+    "defesa": 13,
     "protecao": 0,
     "deslocamento": 9,
     "peRodada": 2,
@@ -157,7 +157,7 @@
       {
         "name": "Rifle de Caça",
         "test": "3D20",
-        "damage": "2d8+4",
+        "damage": "2d8+5",
         "critical": "19x3",
         "range": "12m"
       }
@@ -216,15 +216,15 @@
       },
       {
         "id": "i5",
-        "name": "Proteção Leve",
+        "name": "Mochila Militar",
         "category": "I",
-        "spaces": 2
+        "spaces": 0
       },
       {
         "id": "i6",
-        "name": "Granada de Tinta x2",
+        "name": "Granada de Tinta",
         "category": "0",
-        "spaces": 2
+        "spaces": 1
       },
       {
         "id": "i7",
@@ -378,8 +378,8 @@
         "name": "Revólver",
         "test": "2D20+5",
         "damage": "2D6",
-        "critical": "19",
-        "range": "x2"
+        "critical": "19x2",
+        "range": "8m"
       }
     ],
     "abilities": [
@@ -391,12 +391,12 @@
       {
         "name": "Eclético",
         "cost": 2,
-        "description": "+5 em perícia não treinada. (Página 28)"
+        "description": "+5 em perícia não treinada."
       },
       {
         "name": "Perito",
         "cost": 2,
-        "description": "+1d6 em perícia. (Página 28)"
+        "description": "+1d6 em perícias de Artes e Intuição."
       },
       {
         "name": "Mixagem de Campo",
