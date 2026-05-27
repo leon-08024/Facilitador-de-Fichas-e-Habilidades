@@ -14,10 +14,5 @@ export const routes: Routes = [
     loadComponent: () => import('./features/Player/player').then(m => m.PlayerPageComponent),
     canActivate: [playerGuard]
   },
-  {
-    path: 'estrangeiro',
-    loadComponent: () => import('./features/Estrangeiro/estrangeiro').then(m => m.EstrangeiroPageComponent),
-    canActivate: [estrangeiroGuard]
-  },
   { path: '**', redirectTo: '' }
 ];
