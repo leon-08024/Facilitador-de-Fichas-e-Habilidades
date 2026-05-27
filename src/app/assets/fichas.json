@@ -459,5 +459,262 @@
         "spaces": 0
       }
     ]
+  },
+  {
+    "id": "f4-nex15",
+    "ownerId": "u4",
+    "name": "Rui Martirez",
+    "class": "Especialista - Performático",
+    "origin": "Artista",
+    "nex": 15,
+    "attributes": {
+      "FOR": 1,
+      "AGI": 2,
+      "INT": 2,
+      "PRE": 3,
+      "VIG": 1
+    },
+    "maxStats": {
+      "PV": 28,
+      "PE": 25,
+      "SAN": 25
+    },
+    "currentStats": {
+      "PV": 28,
+      "PE": 25,
+      "SAN": 25
+    },
+    "defesa": 12,
+    "protecao": 0,
+    "deslocamento": "9",
+    "peRodada": 3,
+    "skills": {
+      "Artes": 7,
+      "Atualidades": 5,
+      "Enganação": 5,
+      "Fortitude": 5,
+      "Iniciativa": 5,
+      "Intuição": 5,
+      "Medicina": 5,
+      "Percepção": 5,
+      "Pontaria": 5,
+      "Reflexos": 5,
+      "Vontade": 5
+    },
+    "attacks": [
+      {
+        "name": "Saxofone Elétrico de Combate",
+        "test": "3d20 + 7",
+        "damage": "2d8e",
+        "critical": "20/2x",
+        "range": "Curto"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Magnun Opus",
+        "cost": "SC",
+        "page": 17,
+        "description": "Você é famoso por uma de suas obras. Uma vez por missão, pode determinar que uma pessoa envolvida em uma cena de interação o reconheça. Você recebe +5 em testes de Presença e de perícias baseadas em Presença contra aquela pessoa."
+      },
+      {
+        "name": "Eclético",
+        "cost": 2,
+        "page": 28,
+        "description": "+5 em perícia não treinada."
+      },
+      {
+        "name": "Perito",
+        "cost": 2,
+        "page": 28,
+        "description": "+1d6 em perícia de Artes e Intuição."
+      },
+      {
+        "name": "Mixagem de Campo",
+        "cost": 1,
+        "description": "Uso: Uma vez por cena; Alcance: Médio; Efeito: Rui usa seu equipamento musical para atrapalhar um inimigo. O alvo deve fazer um teste de Vontade ou ficará Vulnerável até o final da rodada."
+      },
+      {
+        "name": "Ensaio",
+        "cost": "SC",
+        "page": 119,
+        "description": "+1 na margem de ameaça dos ataques."
+      },
+      {
+        "name": "Instrumento Elétrico de Combate",
+        "cost": null,
+        "description": "Habilidade relacionada ao Saxofone Elétrico de Combate."
+      }
+    ],
+    "inventory": [
+      {
+        "id": "i1",
+        "name": "Saxofone Elétrico de Combate",
+        "category": "2",
+        "spaces": 2
+      },
+      {
+        "id": "i2",
+        "name": "Câmera de Aura Paranormal",
+        "category": "2",
+        "spaces": 1
+      },
+      {
+        "id": "i3",
+        "name": "Granada de Atordoamento",
+        "category": "0",
+        "spaces": 1
+      },
+      {
+        "id": "i4",
+        "name": "Vestimenta/Arte",
+        "category": "1",
+        "spaces": 1
+      },
+      {
+        "id": "i5",
+        "name": "Bandoleira",
+        "category": "1",
+        "spaces": 1
+      },
+      {
+        "id": "i6",
+        "name": "Mochila Militar",
+        "category": "1",
+        "spaces": 0
+      }
+    ]
+  },
+  {
+    "id": "f4-nex20",
+    "ownerId": "u4",
+    "name": "Rui Martirez",
+    "class": "Especialista Performático",
+    "origin": "Artista",
+    "nex": 20,
+    "attributes": {
+      "FOR": 1,
+      "AGI": 2,
+      "INT": 3,
+      "PRE": 3,
+      "VIG": 1
+    },
+    "maxStats": {
+      "PV": 31,
+      "PE": 32,
+      "SAN": 30
+    },
+    "currentStats": {
+      "PV": 31,
+      "PE": 32,
+      "SAN": 30
+    },
+    "defesa": 12,
+    "protecao": 0,
+    "deslocamento": "9",
+    "peRodada": 4,
+    "skills": {
+      "Artes": 7,
+      "Atualidades": 5,
+      "Enganação": 5,
+      "Fortitude": 5,
+      "Iniciativa": 5,
+      "Intuição": 5,
+      "Medicina": 5,
+      "Percepção": 5,
+      "Pontaria": 5,
+      "Reflexos": 5,
+      "Vontade": 5
+    },
+    "attacks": [
+      {
+        "name": "Microfone Elétrico de Combate",
+        "test": "3d20 + 7",
+        "damage": "2d8e",
+        "critical": "20/2x",
+        "range": "Curto"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Magnun Opus",
+        "cost": "SC",
+        "page": 17,
+        "description": "Você é famoso por uma de suas obras. Uma vez por missão, pode determinar que uma pessoa envolvida em uma cena de interação o reconheça. Você recebe +5 em testes de Presença e de perícias baseadas em Presença contra aquela pessoa."
+      },
+      {
+        "name": "Eclético",
+        "cost": 2,
+        "page": 28,
+        "description": "+5 em perícia não treinada."
+      },
+      {
+        "name": "Perito",
+        "cost": 2,
+        "page": 28,
+        "description": "+1d6 em perícia."
+      },
+      {
+        "name": "Mixagem de Campo",
+        "cost": 1,
+        "description": "Uso: Uma vez por cena; Alcance: Médio; Efeito: Rui usa seu equipamento musical para atrapalhar um inimigo. O alvo deve fazer um teste de Vontade ou ficará Vulnerável até o final da rodada."
+      },
+      {
+        "name": "Ensaio",
+        "cost": "SC",
+        "page": 119,
+        "description": "+1 na margem de ameaça dos ataques até o início da próxima cena de interlúdio."
+      },
+      {
+        "name": "Instrumento Elétrico",
+        "cost": null,
+        "description": "Habilidade relacionada ao Microfone Elétrico de Combate."
+      }
+    ],
+    "inventory": [
+      {
+        "id": "i1",
+        "name": "Fone Elétrico de Combate",
+        "category": "2",
+        "spaces": 2
+      },
+      {
+        "id": "i2",
+        "name": "Câmera de Aura Paranormal",
+        "category": "2",
+        "spaces": 1
+      },
+      {
+        "id": "i3",
+        "name": "Granada de Atordoamento",
+        "category": "0",
+        "spaces": 1
+      },
+      {
+        "id": "i4",
+        "name": "Vestimenta/Arte",
+        "category": "1",
+        "spaces": 1
+      },
+      {
+        "id": "i5",
+        "name": "Bandoleira",
+        "category": "1",
+        "spaces": 1
+      },
+      {
+        "id": "i6",
+        "name": "Mochila Militar",
+        "category": "1",
+        "spaces": 0
+      }
+    ],
+    "limiteItens": {
+      "I": 3,
+      "II": 2,
+      "III": null,
+      "IV": null
+    },
+    "cargaMax": 7
   }
 ]
